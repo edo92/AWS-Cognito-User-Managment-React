@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { Row, Col } from "antd";
+import { Row, Col, message } from "antd";
 
 import { AuthContext } from "../../../components/AuthProvider";
 import LoginForm from "./LoginForm";
@@ -12,15 +12,18 @@ const backgroundStyle = {
 };
 
 const LoginTwo = (props) => {
+  const [loading, setLoading] = useState();
   const { authenticate } = useContext(AuthContext);
 
   const onLogin = ({ email, password }) => {
+    setLoading(true);
     authenticate(email, password)
-      .then((data) => {
+      .then(() => {
         props.history.push("/dashboard");
       })
       .catch((err) => {
-        console.log("error", err);
+        message.error(err.message);
+        setLoading(false);
       });
   };
 
@@ -36,7 +39,7 @@ const LoginTwo = (props) => {
                   Don't have an account yet? <a href="/signup">Sign Up</a>
                 </p>
                 <div className="mt-4">
-                  <LoginForm onLogin={onLogin} />{" "}
+                  <LoginForm onLogin={onLogin} loading={loading} />{" "}
                 </div>
               </Col>
             </Row>
