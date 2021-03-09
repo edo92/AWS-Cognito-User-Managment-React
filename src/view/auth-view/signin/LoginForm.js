@@ -7,8 +7,8 @@ import CustomIcon from "../../../components/Icon";
 import { GoogleSVG, FacebookSVG } from "../../../assets/svg/icon";
 
 const initialCredential = {
-  email: "edote92@gmail.com",
-  password: "Edo883562616!",
+  email: "myemail@gmail.com",
+  password: "Password123!",
 };
 
 const LoginForm = (props) => {
@@ -107,7 +107,7 @@ const LoginForm = (props) => {
             Sign In
           </Button>
         </Form.Item>
-        {renderOtherSignIn}
+        {/* {renderOtherSignIn} */}
       </Form>
     </>
   );
