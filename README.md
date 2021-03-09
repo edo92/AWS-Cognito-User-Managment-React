@@ -1,8 +1,6 @@
 # AWS Cognito Login with React
 
----
-
-[Aws Cognito Setup](https://github.com/edo92/AWS-Cognito-User-Managment-React/blob/docs/cognito-setup.md)
+* **[Aws Cognito Setup](https://github.com/edo92/AWS-Cognito-User-Managment-React/blob/docs/cognito-setup.md)**
 
 ---
 
