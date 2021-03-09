@@ -4,6 +4,9 @@
 
 ---
 
+<br/>
+<br/>
+
 <p>
   <img src="https://github.com/edo92/AWS-Cognito-User-Managment-React/blob/docs/images/signin.PNG"/>
 </p>
